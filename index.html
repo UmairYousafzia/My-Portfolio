@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary: #3a86ff;
+            --secondary: #8338ec;
+            --accent: #06ffa5;
+            --dark: #212529;
+            --light: #f8f9fa;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            transition: var(--transition);
+        }
+
+        body.dark {
+            background-color: var(--dark);
+            color: var(--light);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transition: var(--transition);
+        }
+
+        .progress-bar {
+            transition: width 1.5s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .project-card {
+            transition: var(--transition);
+        }
+
+        .experience-card {
+            transition: var(--transition);
+        }
+
+        .experience-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-card {
+            transition: var(--transition);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .theme-toggle {
+            transition: var(--transition);
+        }
+
+        .theme-toggle:hover {
+            transform: rotate(30deg);
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        /* RTL Support for Arabic */
+        body.rtl {
+            direction: rtl;
+        }
+
+        body.rtl .flex {
+            flex-direction: row-reverse;
+        }
+
+        body.rtl .text-right {
+            text-align: left;
+        }
+
+        body.rtl .text-left {
+            text-align: right;
+        }
+
+        body.rtl .md\\:pl-12 {
+            padding-left: 0;
+            padding-right: 3rem;
+        }
+
+        body.rtl .md\\:pl-10 {
+            padding-left: 0;
+            padding-right: 2.5rem;
+        }
+
+        body.rtl .mr-4 {
+            margin-right: 0;
+            margin-left: 1rem;
+        }
+
+        body.rtl .ml-4 {
+            margin-left: 0;
+            margin-right: 1rem;
+        }
+
+        body.rtl .space-x-8 > * + * {
+            margin-left: 0;
+            margin-right: 2rem;
+        }
+
+        body.rtl .space-x-6 > * + * {
+            margin-left: 0;
+            margin-right: 1.5rem;
+        }
+
+        body.rtl .space-x-4 > * + * {
+            margin-left: 0;
+            margin-right: 1rem;
+        }
+
+        body.rtl .space-x-2 > * + * {
+            margin-left: 0;
+            margin-right: 0.5rem;
+        }
+
+        body.rtl .border-l-4 {
+            border-left: none;
+            border-right: 4px solid;
+        }
+
+        body.rtl .experience-card:hover {
+            transform: translateX(-5px);
+        }
+    </style>
+    <!-- Add in <head> -->
+<!-- In <head> -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <!-- Navigation -->
+    <header class="fixed w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-md z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+  <a href="#" class="text-5xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 p-2" style="font-family: 'Great Vibes', cursive;">
+    Umair Hussain
+</a>
+
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium" data-lang="nav_home">Home</a>
+                <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium" data-lang="nav_about">About</a>
+                <a href="#experience" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium" data-lang="nav_experience">Experience</a>
+                <a href="#skills" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium" data-lang="nav_skills">Skills</a>
+                <a href="#projects" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium" data-lang="nav_projects">Projects</a>
+                <a href="#contact" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium" data-lang="nav_contact">Contact</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <!-- Language Switcher -->
+                <div class="relative">
+                    <button id="language-toggle" class="flex items-center space-x-2 p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600 dark:text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                        </svg>
+                        <span id="current-lang" class="text-sm font-medium text-gray-600 dark:text-gray-300">EN</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-600 dark:text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    
+                    <!-- Language Dropdown -->
+                    <div id="language-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-50">
+                        <div class="py-1">
+                            <button onclick="changeLanguage('en')" class="language-option w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center space-x-2">
+                                <span class="text-lg">🇺🇸</span>
+                                <span>English</span>
+                            </button>
+                            <button onclick="changeLanguage('es')" class="language-option w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center space-x-2">
+                                <span class="text-lg">🇪🇸</span>
+                                <span>Español</span>
+                            </button>
+                            <button onclick="changeLanguage('fr')" class="language-option w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center space-x-2">
+                                <span class="text-lg">🇫🇷</span>
+                                <span>Français</span>
+                            </button>
+                            <button onclick="changeLanguage('ar')" class="language-option w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center space-x-2">
+                                <span class="text-lg">🇸🇦</span>
+                                <span>العربية</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="theme-toggle" class="theme-toggle p-2 rounded-full bg-gray-200 dark:bg-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800 dark:text-yellow-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                </button>
+
+                <button id="mobile-menu-button" class="md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-800">
+            <div class="px-2 pt-2 pb-4 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" data-lang="nav_home">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" data-lang="nav_about">About</a>
+                <a href="#experience" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" data-lang="nav_experience">Experience</a>
+                <a href="#skills" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" data-lang="nav_skills">Skills</a>
+                <a href="#projects" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" data-lang="nav_projects">Projects</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" data-lang="nav_contact">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-16">
+        <div class="container mx-auto px-6 py-20 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 dark:text-white">
+                    <span data-lang="hero_greeting">Hi, I'm</span> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">Umair Hussain</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-gray-600 dark:text-gray-300" data-lang="hero_title">
+                    Full Stack Developer
+                </h2>
+                <p class="text-lg mb-8 text-gray-600 dark:text-gray-300" data-lang="hero_description">
+                    I'm a passionate Full Stack Developer with 3+ years of experience crafting scalable web applications using Laravel, WordPress, and modern JavaScript frameworks.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#projects" class="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-medium hover:opacity-90 transition" data-lang="hero_view_work">
+                        View Work
+                    </a>
+                    <a href="#contact" class="px-6 py-3 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition" data-lang="hero_contact_me">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 md:pl-10">
+                <div class="relative inline-block">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-3xl blur-xl opacity-40"></div>
+                    <img src="best.png" alt="Professional developer working at a modern workspace with dual monitors and clean setup" class="relative rounded-2xl w-full max-w-md floating mx-auto" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-100 dark:bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 dark:text-white" data-lang="about_title">About Me</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <img src="uma.png" alt="Headshot of a professional developer smiling in a business casual outfit" class="rounded-xl w-full max-w-xs" />
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <h3 class="text-2xl font-semibold mb-6 dark:text-white" data-lang="about_who_i_am">Who I Am</h3>
+                    <p class="mb-6 text-gray-600 dark:text-gray-300" data-lang="about_description1">
+                        I'm a passionate Full Stack Developer with 3+ years of experience building web applications. My expertise lies in Laravel Framework, Wordpress, Html, CSs, Bootstrap & React js.
+                    </p>
+                    <p class="mb-6 text-gray-600 dark:text-gray-300" data-lang="about_description2">
+                        I specialize in creating responsive, accessible, and performant web applications. My approach combines technical excellence with thoughtful design to deliver exceptional user experiences.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex items-start">
+                            <div class="mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-medium mb-1 dark:text-white" data-lang="about_problem_solver">Problem Solver</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-300" data-lang="about_problem_solver_desc">Creative solutions for complex challenges</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-medium mb-1 dark:text-white" data-lang="about_continuous_learner">Continuous Learner</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-300" data-lang="about_continuous_learner_desc">Always expanding my skills and knowledge</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-medium mb-1 dark:text-white" data-lang="about_team_player">Team Player</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-300" data-lang="about_team_player_desc">Collaborative and effective communicator</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-medium mb-1 dark:text-white" data-lang="about_detail_oriented">Detail Oriented</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-300" data-lang="about_detail_oriented_desc">Precision and quality in every line of code</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 dark:text-white" data-lang="experience_title">Work Experience</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+                <p class="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto" data-lang="experience_description">
+                    My professional journey in web development, working with various technologies and frameworks.
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <!-- Current Job -->
+                <div class="experience-card bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 mb-6 border-l-4 border-green-500">
+                    <div class="flex flex-col md:flex-row md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold dark:text-white" data-lang="tryinotech_title">Full Stack Web Developer</h3>
+                            <p class="text-lg text-gray-600 dark:text-gray-300" data-lang="tryinotech_company">Tryinotech</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400" data-lang="tryinotech_location">Kurri Road, Islamabad</p>
+                        </div>
+                        <div class="mt-2 md:mt-0 text-right">
+                            <span class="inline-block px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs rounded-full mb-2" data-lang="experience_current">Current</span>
+                            <p class="text-sm text-gray-500 dark:text-gray-400" data-lang="experience_present">Present</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span data-lang="tryinotech_responsibility1">Developing and maintaining Laravel and WordPress websites for diverse clients</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span data-lang="tryinotech_responsibility2">Learning and implementing NestJS framework for modern backend development</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span data-lang="tryinotech_responsibility3">Building responsive and user-friendly web applications with modern technologies</span>
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full">Laravel</span>
+                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs rounded-full">WordPress</span>
+                        <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs rounded-full">NestJS</span>
+                        <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 text-xs rounded-full">TypeScript</span>
+                    </div>
+                </div>
+
+                <!-- Previous Job -->
+                <div class="experience-card bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 mb-6 border-l-4 border-gray-400">
+                    <div class="flex flex-col md:flex-row md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold dark:text-white" data-lang="bot_solutions_title">Full Stack Developer</h3>
+                            <p class="text-lg text-gray-600 dark:text-gray-300" data-lang="bot_solutions_company">Bot Solutions</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400" data-lang="bot_solutions_location">Shamshabad, Islamabad</p>
+                        </div>
+                        <div class="mt-2 md:mt-0 text-right">
+                            <p class="text-sm text-gray-500 dark:text-gray-400" data-lang="experience_years">~2 years</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span data-lang="bot_solutions_responsibility1">Developed and maintained multiple Laravel-based web applications</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span data-lang="bot_solutions_responsibility2">Created custom WordPress themes and plugins for client websites</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span data-lang="bot_solutions_responsibility3">Worked on frontend development using HTML, CSS, Bootstrap, and React.js</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span data-lang="bot_solutions_responsibility4">Collaborated with cross-functional teams to deliver high-quality web solutions</span>
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full">Laravel</span>
+                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs rounded-full">WordPress</span>
+                        <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 text-xs rounded-full">React.js</span>
+                        <span class="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 text-xs rounded-full">Bootstrap</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 dark:text-white" data-lang="skills_title">My Skills</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="skill-card bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm">
+                    <h3 class="text-xl font-semibold mb-6 dark:text-white" data-lang="skills_technical">Technical Skills</h3>
+                    <div class="space-y-6">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium dark:text-white">Laravel</span>
+                                <span class="text-gray-500 dark:text-gray-400">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                                <div class="progress-bar bg-gradient-to-r from-blue-500 to-blue-400 h-2.5 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium dark:text-white">HTML, CSS & Bootstrap</span>
+                                <span class="text-gray-500 dark:text-gray-400">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                                <div class="progress-bar bg-gradient-to-r from-blue-500 to-blue-400 h-2.5 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium dark:text-white">React js</span>
+                                <span class="text-gray-500 dark:text-gray-400">70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                                <div class="progress-bar bg-gradient-to-r from-blue-500 to-blue-400 h-2.5 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium dark:text-white">Wordpress</span>
+                                <span class="text-gray-500 dark:text-gray-400">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                                <div class="progress-bar bg-gradient-to-r from-blue-500 to-blue-400 h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium dark:text-white">NestJS</span>
+                                <span class="text-gray-500 dark:text-gray-400">65%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                                <div class="progress-bar bg-gradient-to-r from-blue-500 to-blue-400 h-2.5 rounded-full" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm">
+                    <h3 class="text-xl font-semibold mb-6 dark:text-white" data-lang="skills_professional">Professional Skills</h3>
+                    <div class="space-y-6">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium dark:text-white">Communication</span>
+                                <span class="text-gray-500 dark:text-gray-400">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                                <div class="progress-bar bg-gradient-to-r from-purple-600 to-purple-500 h-2.5 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium dark:text-white">Teamwork</span>
+                                <span class="text-gray-500 dark:text-gray-400">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                                <div class="progress-bar bg-gradient-to-r from-purple-600 to-purple-500 h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium dark:text-white">Project Management</span>
+                                <span class="text-gray-500 dark:text-gray-400">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                                <div class="progress-bar bg-gradient-to-r from-purple-600 to-purple-500 h-2.5 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium dark:text-white">Creativity</span>
+                                <span class="text-gray-500 dark:text-gray-400">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                                <div class="progress-bar bg-gradient-to-r from-purple-600 to-purple-500 h-2.5 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-100 dark:bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 dark:text-white" data-lang="projects_title">My Projects</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+                <p class="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto" data-lang="projects_description">
+                    Here are some of my recent projects. Each one demonstrates different aspects of my skills and expertise.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-sm transition cursor-pointer">
+                    <div class="project-image overflow-hidden">
+                        <img src="molar.PNG" alt="Modern e-commerce dashboard with analytics charts and product listings" class="w-full h-48 object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 dark:text-white" data-lang="project1_title">Dental Managment System</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4" data-lang="project1_description">
+                            Comprehensive analytics dashboard for Dental Managment System with Laravel and React js with interactive charts.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full">Laravel</span>
+                                             <span class="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 text-xs rounded-full">Bootstrap</span>
+                            <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 text-xs rounded-full">React</span>
+                                         <span class="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 text-xs rounded-full">Inertia js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-sm transition cursor-pointer">
+                    <div class="project-image overflow-hidden">
+                        <img src="cms.PNG" alt="Collaborative task management web application interface with drag and drop functionality" class="w-full h-48 object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 dark:text-white" data-lang="project2_title">CMS Dashboard</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4" data-lang="project2_description">
+                           Creating a comprehensive analytics dashboard with full Functionality like Full Crud Operation & Peremission and Role.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full">Laravel</span>
+                            <span class="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 text-xs rounded-full">Bootstrap</span>
+                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 text-xs rounded-full">Html & Css</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-sm transition cursor-pointer">
+                    <div class="project-image overflow-hidden">
+                        <img src="wordpress.PNG" alt="Mobile banking application interface showing transaction history and fund transfer options" class="w-full h-48 object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 dark:text-white" data-lang="project3_title">Wordpress eCommerce Website</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4" data-lang="project3_description">
+                            A responsive and secure WordPress-based online store with integrated payment gateways, product management, and user-friendly shopping experience.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs rounded-full">Wordpress</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full">Elementor</span>
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs rounded-full">Html & Css</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 dark:text-white" data-lang="contact_title">Get In Touch</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+                <p class="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto" data-lang="contact_description">
+                    Have a project in mind or want to discuss potential opportunities? Feel free to reach out!
+                </p>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <!-- Contact form commented out - replaced with social links -->
+                <!-- 
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:ring-2 focus:ring-blue-500 focus:border-transparent transition" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:ring-2 focus:ring-blue-500 focus:border-transparent transition" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Subject</label>
+                        <input type="text" id="subject" name="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:ring-2 focus:ring-blue-500 focus:border-transparent transition" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Message</label>
+                        <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:ring-2 focus:ring-blue-500 focus:border-transparent transition" required></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium rounded-lg hover:opacity-90 transition focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+
+                <div id="form-success" class="hidden mt-8 p-4 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-lg">
+                    Your message has been sent successfully! I'll get back to you soon.
+                </div>
+                -->
+
+                <!-- Social Media Links -->
+                <div class="text-center">
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-8" data-lang="contact_connect">
+                        Connect with me on social media or reach out via email:
+                    </p>
+                    
+                    <div class="flex justify-center space-x-6 mb-8">
+                        <!-- GitHub -->
+                        <a href="https://github.com/UmairYousafzia" target="_blank" class="group bg-gray-800 dark:bg-gray-700 p-4 rounded-full hover:bg-gray-700 dark:hover:bg-gray-600 transition-all duration-300 hover:scale-110">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-300 group-hover:text-white transition" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/umair-hussain-dev/" target="_blank" class="group bg-blue-600 p-4 rounded-full hover:bg-blue-700 transition-all duration-300 hover:scale-110">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white group-hover:text-blue-100 transition" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+
+                        <!-- Twitter -->
+                        <a href="#" target="_blank" class="group bg-sky-500 p-4 rounded-full hover:bg-sky-600 transition-all duration-300 hover:scale-110">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white group-hover:text-sky-100 transition" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Email Contact -->
+                    <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 text-center">
+                        <p class="text-gray-600 dark:text-gray-300 mb-2" data-lang="contact_email_me">Email me directly:</p>
+                        <a href="mailto:umairsb84@gmail.com" class="text-xl font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition">
+                            umairsb84@gmail.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 bg-gray-800 text-gray-300">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-5xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 p-2" style="font-family: 'Great Vibes', cursive;">
+    Umair Hussain
+</a>
+                    <p class="mt-2 text-sm" data-lang="footer_copyright">© umairsb84@gmail.com 2025</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://github.com/UmairYousafzia" class="text-gray-400 hover:text-white transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                   
+                    <a href="https://www.linkedin.com/in/umair-hussain-dev/" class="text-gray-400 hover:text-white transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script>
+        // Language Management System
+        let currentLanguage = localStorage.getItem('language') || 'en';
+        
+        // Initialize language on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            changeLanguage(currentLanguage);
+            setupLanguageToggle();
+            setupThemeToggle();
+            setupMobileMenu();
+            setupSmoothScrolling();
+            animateProgressBars();
+            setupContactForm();
+        });
+
+        // Change language function
+        function changeLanguage(lang) {
+            currentLanguage = lang;
+            localStorage.setItem('language', lang);
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = lang === 'ar' ? 'ar' : lang;
+            
+            // Update RTL for Arabic
+            if (lang === 'ar') {
+                document.documentElement.dir = 'rtl';
+                document.body.classList.add('rtl');
+            } else {
+                document.documentElement.dir = 'ltr';
+                document.body.classList.remove('rtl');
+            }
+            
+            // Update current language display
+            const currentLangElement = document.getElementById('current-lang');
+            if (currentLangElement) {
+                currentLangElement.textContent = lang.toUpperCase();
+            }
+            
+            // Update all translatable elements
+            updateTranslations();
+            
+            // Close language dropdown
+            const dropdown = document.getElementById('language-dropdown');
+            if (dropdown) {
+                dropdown.classList.add('hidden');
+            }
+        }
+
+        // Update all elements with data-lang attributes
+        function updateTranslations() {
+            const elements = document.querySelectorAll('[data-lang]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-lang');
+                if (translations[currentLanguage] && translations[currentLanguage][key]) {
+                    element.textContent = translations[currentLanguage][key];
+                }
+            });
+        }
+
+        // Setup language toggle dropdown
+        function setupLanguageToggle() {
+            const toggle = document.getElementById('language-toggle');
+            const dropdown = document.getElementById('language-dropdown');
+            
+            if (toggle && dropdown) {
+                toggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    dropdown.classList.toggle('hidden');
+                });
+                
+                // Close dropdown when clicking outside
+                document.addEventListener('click', () => {
+                    dropdown.classList.add('hidden');
+                });
+                
+                // Prevent dropdown from closing when clicking inside
+                dropdown.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                });
+            }
+        }
+
+        // Dark/Light Mode Toggle
+        function setupThemeToggle() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+
+            // Check for saved theme preference or use preferred color scheme
+            const currentTheme = localStorage.getItem('theme') || 
+                                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            
+            if (currentTheme === 'dark') {
+                body.classList.add('dark');
+            }
+
+            themeToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                const theme = body.classList.contains('dark') ? 'dark' : 'light';
+                localStorage.setItem('theme', theme);
+            });
+        }
+
+        // Mobile Menu Toggle
+        function setupMobileMenu() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Smooth scrolling for navigation links
+        function setupSmoothScrolling() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+        }
+
+        // Animate progress bars when they come into view
+        function animateProgressBars() {
+            const progressBars = document.querySelectorAll('.progress-bar');
+            
+            progressBars.forEach(bar => {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            // Animate only if not already animated
+                            if (!bar.classList.contains('animate-pulse')) {
+                                bar.style.width = bar.style.width;
+                                bar.classList.add('animate-pulse');
+                            }
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                observer.observe(bar);
+            });
+        }
+
+        // Form submission
+        function setupContactForm() {
+            const contactForm = document.getElementById('contact-form');
+            const formSuccess = document.getElementById('form-success');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    // Here you would typically send the form data to a server
+                    // For demo purposes, we'll just show the success message
+                    
+                    contactForm.reset();
+                    formSuccess.classList.remove('hidden');
+                    formSuccess.classList.add('block');
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        formSuccess.classList.remove('block');
+                        formSuccess.classList.add('hidden');
+                    }, 5000);
+                });
+            }
+        }
+    </script>
+</body>
+</html>
+
