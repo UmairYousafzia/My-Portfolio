@@ -97,14 +97,14 @@ const translations = {
         // Hero Section
         'hero_greeting': 'Hola, soy',
         'hero_title': 'Desarrollador Full Stack',
-        'hero_description': 'Soy un apasionado Desarrollador Full Stack con más de 3 años de experiencia creando aplicaciones web escalables usando Laravel, WordPress y modernos frameworks JavaScript.',
+        'hero_description': 'Soy un apasionado Desarrollador Full Stack con más de 3 años de experiencia creando aplicaciones web escalables usando Laravel, WordPress y modernos frameworks JavaScript,  Linux , WindowServer, Devops, Kubernetes, AWS, Git & github.',
         'hero_view_work': 'Ver Trabajo',
         'hero_contact_me': 'Contáctame',
         
         // About Section
         'about_title': 'Acerca de Mí',
         'about_who_i_am': 'Quién Soy',
-        'about_description1': 'Soy un apasionado Desarrollador Full Stack con más de 3 años de experiencia construyendo aplicaciones web. Mi experiencia se encuentra en Laravel Framework, Wordpress, Html, CSS, Bootstrap y React js.',
+        'about_description1': 'Soy un apasionado Desarrollador Full Stack con más de 3 años de experiencia construyendo aplicaciones web. Mi experiencia se encuentra en Laravel Framework, Wordpress, Html, CSS, Bootstrap y React js ,  Linux , WindowServer, Devops, Kubernetes, AWS, Git & github.',
         'about_description2': 'Me especializo en crear aplicaciones web responsivas, accesibles y de alto rendimiento. Mi enfoque combina excelencia técnica con diseño cuidadoso para ofrecer experiencias de usuario excepcionales.',
         'about_problem_solver': 'Solucionador de Problemas',
         'about_problem_solver_desc': 'Soluciones creativas para desafíos complejos',
@@ -136,7 +136,7 @@ const translations = {
         'bot_solutions_location': 'Shamshabad, Islamabad',
         'bot_solutions_responsibility1': 'Desarrollé y mantuve múltiples aplicaciones web basadas en Laravel',
         'bot_solutions_responsibility2': 'Creé temas y plugins personalizados de WordPress para sitios web de clientes',
-        'bot_solutions_responsibility3': 'Trabajé en desarrollo frontend usando HTML, CSS, Bootstrap y React.js',
+        'bot_solutions_responsibility3': 'Trabajé en desarrollo frontend usando HTML, CSS, Bootstrap y React.js , Linux , WindowServer, Devops, Kubernetes, AWS, Git & github',
         'bot_solutions_responsibility4': 'Colaboré con equipos multifuncionales para entregar soluciones web de alta calidad',
         
         // Skills Section
@@ -182,14 +182,14 @@ const translations = {
         // Hero Section
         'hero_greeting': 'Bonjour, je suis',
         'hero_title': 'Développeur Full Stack',
-        'hero_description': 'Je suis un développeur Full Stack passionné avec plus de 3 ans d\'expérience dans la création d\'applications web évolutives utilisant Laravel, WordPress et frameworks JavaScript modernes.',
+        'hero_description': 'Je suis un développeur Full Stack passionné avec plus de 3 ans d\'expérience dans la création d\'applications web évolutives utilisant Laravel, WordPress et frameworks JavaScript modernes,  Linux , WindowServer, Devops, Kubernetes, AWS, Git & github.',
         'hero_view_work': 'Voir le Travail',
         'hero_contact_me': 'Me Contacter',
         
         // About Section
         'about_title': 'À Propos de Moi',
         'about_who_i_am': 'Qui Je Suis',
-        'about_description1': 'Je suis un développeur Full Stack passionné avec plus de 3 ans d\'expérience dans la construction d\'applications web. Mon expertise réside dans Laravel Framework, Wordpress, Html, CSS, Bootstrap et React js.',
+        'about_description1': 'Je suis un développeur Full Stack passionné avec plus de 3 ans d\'expérience dans la construction d\'applications web. Mon expertise réside dans Laravel Framework, Wordpress, Html, CSS, Bootstrap et React js,  Linux , WindowServer, Devops, Kubernetes, AWS, Git & github.',
         'about_description2': 'Je me spécialise dans la création d\'applications web responsives, accessibles et performantes. Mon approche combine l\'excellence technique avec un design réfléchi pour offrir des expériences utilisateur exceptionnelles.',
         'about_problem_solver': 'Solutionneur de Problèmes',
         'about_problem_solver_desc': 'Solutions créatives pour des défis complexes',
@@ -267,14 +267,14 @@ const translations = {
         // Hero Section
         'hero_greeting': 'مرحباً، أنا',
         'hero_title': 'مطور Full Stack',
-        'hero_description': 'أنا مطور Full Stack شغوف مع أكثر من 3 سنوات من الخبرة في بناء تطبيقات الويب القابلة للتوسع باستخدام Laravel و WordPress وأطر JavaScript الحديثة.',
+        'hero_description': 'أنا مطور Full Stack شغوف مع أكثر من 3 سنوات من الخبرة في بناء تطبيقات الويب القابلة للتوسع باستخدام Laravel و WordPress وأطر JavaScript الحديثة , Linux , WindowServer, Devops, Kubernetes, AWS, Git & github.',
         'hero_view_work': 'عرض الأعمال',
         'hero_contact_me': 'تواصل معي',
         
         // About Section
         'about_title': 'نبذة عني',
         'about_who_i_am': 'من أنا',
-        'about_description1': 'أنا مطور Full Stack شغوف مع أكثر من 3 سنوات من الخبرة في بناء تطبيقات الويب. تتمثل خبرتي في Laravel Framework و Wordpress و Html و CSS و Bootstrap و React js.',
+        'about_description1': 'أنا مطور Full Stack شغوف مع أكثر من 3 سنوات من الخبرة في بناء تطبيقات الويب. تتمثل خبرتي في Laravel Framework و Wordpress و Html و CSS و Bootstrap و React js,  Linux , WindowServer, Devops, Kubernetes, AWS, Git & github.',
         'about_description2': 'أنا متخصص في إنشاء تطبيقات الويب المتجاوبة والقابلة للوصول وعالية الأداء. يجمع نهجي بين التميز التقني والتصميم المدروس لتقديم تجارب مستخدم استثنائية.',
         'about_problem_solver': 'حل المشكلات',
         'about_problem_solver_desc': 'حلول إبداعية للتحديات المعقدة',
