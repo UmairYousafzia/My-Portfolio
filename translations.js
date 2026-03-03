@@ -12,14 +12,14 @@ const translations = {
         // Hero Section
         'hero_greeting': "Hi, I'm",
         'hero_title': 'Full Stack Developer',
-        'hero_description': "I'm a passionate Full Stack Developer with 3+ years of experience crafting scalable web applications using Laravel, WordPress, and modern JavaScript frameworks.",
+        'hero_description': "I'm a passionate Full Stack Developer with 4+ years of experience crafting scalable web applications using Laravel, WordPress, and modern JavaScript frameworks, Linux , WindowServer, Devops, Kubernetes, AWS, Git & github.",
         'hero_view_work': 'View Work',
         'hero_contact_me': 'Contact Me',
         
         // About Section
         'about_title': 'About Me',
         'about_who_i_am': 'Who I Am',
-        'about_description1': "I'm a passionate Full Stack Developer with 3+ years of experience building web applications. My expertise lies in Laravel Framework, Wordpress, Html, CSs, Bootstrap & React js.",
+        'about_description1': " I'm a passionate Full Stack Developer with 4+ years of experience building web applications. My expertise lies in Laravel Framework, Wordpress, Html, CSs, Bootstrap & React js , Linux, Window Server, Devops, Docker, Kubernetes, AWS, Git & Github.",
         'about_description2': 'I specialize in creating responsive, accessible, and performant web applications. My approach combines technical excellence with thoughtful design to deliver exceptional user experiences.',
         'about_problem_solver': 'Problem Solver',
         'about_problem_solver_desc': 'Creative solutions for complex challenges',
