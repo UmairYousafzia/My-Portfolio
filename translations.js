@@ -12,14 +12,14 @@ const translations = {
         // Hero Section
         'hero_greeting': "Hi, I'm",
         'hero_title': 'Full Stack Developer',
-        'hero_description': "I'm a passionate Full Stack Developer with 4+ years of experience crafting scalable web applications using Laravel, WordPress, and modern JavaScript frameworks, Linux , WindowServer, Devops, Kubernetes, AWS, Git & github.",
+        'hero_description': "I'm a passionate Full Stack Developer with 3.5+ years of experience crafting scalable web applications using Laravel, WordPress, and HTML, CSS ,Bootstrap, taliwind Css, JavaScript, Linux flavor Ubunto ,Git & github, Dockre.",
         'hero_view_work': 'View Work',
         'hero_contact_me': 'Contact Me',
         
         // About Section
         'about_title': 'About Me',
         'about_who_i_am': 'Who I Am',
-        'about_description1': " I'm a passionate Full Stack Developer with 4+ years of experience building web applications. My expertise lies in Laravel Framework, Wordpress, Html, CSs, Bootstrap & React js , Linux, Window Server, Devops, Docker, Kubernetes, AWS, Git & Github.",
+        'about_description1': " I'm a passionate Full Stack Developer with 3.5+ years of experience building web applications. My expertise lies in Laravel Framework, Wordpress, Html, CSs, Bootstrap & React js ,Linux flavor Ubunto ,Git & github, Dockre.",
         'about_description2': 'I specialize in creating responsive, accessible, and performant web applications. My approach combines technical excellence with thoughtful design to deliver exceptional user experiences.',
         'about_problem_solver': 'Problem Solver',
         'about_problem_solver_desc': 'Creative solutions for complex challenges',
@@ -35,7 +35,7 @@ const translations = {
         'experience_description': 'My professional journey in web development, working with various technologies and frameworks.',
         'experience_current': 'Current',
         'experience_present': 'Present',
-        'experience_years': '~2 years',
+        'experience_years': '~2.5 years',
         
         // Tryinotech Experience
         'tryinotech_title': 'Full Stack Web Developer',
@@ -97,14 +97,14 @@ const translations = {
         // Hero Section
         'hero_greeting': 'Hola, soy',
         'hero_title': 'Desarrollador Full Stack',
-        'hero_description': 'Soy un apasionado Desarrollador Full Stack con más de 3 años de experiencia creando aplicaciones web escalables usando Laravel, WordPress y modernos frameworks JavaScript,  Linux , WindowServer, Devops, Kubernetes, AWS, Git & github.',
+        'hero_description': 'Soy un apasionado Desarrollador Full Stack con más de 3 años de experiencia creando aplicaciones web escalables usando Laravel, WordPress y modernos frameworks JavaScript, Ubuntu,  Git & github, Docker.',
         'hero_view_work': 'Ver Trabajo',
         'hero_contact_me': 'Contáctame',
         
         // About Section
         'about_title': 'Acerca de Mí',
         'about_who_i_am': 'Quién Soy',
-        'about_description1': 'Soy un apasionado Desarrollador Full Stack con más de 3 años de experiencia construyendo aplicaciones web. Mi experiencia se encuentra en Laravel Framework, Wordpress, Html, CSS, Bootstrap y React js ,  Linux , WindowServer, Devops, Kubernetes, AWS, Git & github.',
+        'about_description1': 'Soy un apasionado Desarrollador Full Stack con más de 3 años de experiencia construyendo aplicaciones web. Mi experiencia se encuentra en Laravel Framework, Wordpress, Html, CSS, Bootstrap y React js , Ubuntu , Git & github, Docker.',
         'about_description2': 'Me especializo en crear aplicaciones web responsivas, accesibles y de alto rendimiento. Mi enfoque combina excelencia técnica con diseño cuidadoso para ofrecer experiencias de usuario excepcionales.',
         'about_problem_solver': 'Solucionador de Problemas',
         'about_problem_solver_desc': 'Soluciones creativas para desafíos complejos',
@@ -120,7 +120,7 @@ const translations = {
         'experience_description': 'Mi viaje profesional en desarrollo web, trabajando con varias tecnologías y frameworks.',
         'experience_current': 'Actual',
         'experience_present': 'Presente',
-        'experience_years': '~2 años',
+        'experience_years': '~2.5 años',
         
         // Tryinotech Experience
         'tryinotech_title': 'Desarrollador Web Full Stack',
