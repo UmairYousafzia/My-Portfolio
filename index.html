@@ -6,197 +6,206 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professional Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 
     <!-- Add in <head> -->
     <!-- In <head> -->
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 </head>
 
-<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+<body class="bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 text-white transition-colors duration-300 font-sans" style="font-family: 'Inter', sans-serif;">
     <!-- Navigation -->
-    <header class="fixed w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-md z-50 shadow-sm">
-        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#"
-                class="text-5xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 p-2"
-                style="font-family: 'Great Vibes', cursive;">
-                Full Stack
-            </a>
+    <header class="fixed w-full bg-gray-900/95 backdrop-blur-lg z-50 border-b border-gray-800/50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#"
+                    class="text-2xl font-bold text-white tracking-tight">
+                    <span class="text-cyan-400 mx-1">Umair</span>Hussain
+                </a>
 
-            <div class="hidden md:flex space-x-8">
-                <a href="#home"
-                    class="nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Home</a>
-                <a href="#about"
-                    class="nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">About</a>
-                <a href="#experience"
-                    class="nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Experience</a>
-                <a href="#skills"
-                    class="nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Skills</a>
-                <a href="#projects"
-                    class="nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Projects</a>
-                <a href="#contact"
-                    class="nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium">Contact</a>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#home"
+                        class="nav-link px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-all duration-300">Home</a>
+                    <a href="#about"
+                        class="nav-link px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-all duration-300">About</a>
+                    <a href="#experience"
+                        class="nav-link px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-all duration-300">Experience</a>
+                    <a href="#skills"
+                        class="nav-link px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-all duration-300">Skills</a>
+                    <a href="#projects"
+                        class="nav-link px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-all duration-300">Projects</a>
+                    <a href="#contact"
+                        class="nav-link px-6 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-all duration-300 font-medium">Contact</a>
+                </div>
+
+                <button id="mobile-menu-button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden p-2 cursor-pointer focus:outline-none text-gray-300 hover:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
             </div>
-            <a href="#"
-                class="text-5xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 p-2"
-                style="font-family: 'Great Vibes', cursive;">
-              Web Developer
-            </a>
-            <button id="mobile-menu-button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden relative z-[100] p-2 cursor-pointer focus:outline-none pointer-events-auto bg-blue-500 rounded">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-        </nav>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-800 relative z-40  text-center">
-            <div class="px-2 pt-2 pb-4 space-y-1">
+        <div id="mobile-menu" class="md:hidden hidden bg-gray-900 border-t border-gray-800 mt-4">
+            <div class="px-2 pt-4 pb-6 space-y-2">
                 <a href="#home" onclick="document.getElementById('mobile-menu').classList.add('hidden')"
-                    class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Home</a>
+                    class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition">Home</a>
                 <a href="#about" onclick="document.getElementById('mobile-menu').classList.add('hidden')"
-                    class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">About</a>
+                    class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition">About</a>
                 <a href="#experience" onclick="document.getElementById('mobile-menu').classList.add('hidden')"
-                    class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Experience</a>
+                    class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition">Experience</a>
                 <a href="#skills" onclick="document.getElementById('mobile-menu').classList.add('hidden')"
-                    class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Skills</a>
+                    class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition">Skills</a>
                 <a href="#projects" onclick="document.getElementById('mobile-menu').classList.add('hidden')"
-                    class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Projects</a>
+                    class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition">Projects</a>
                 <a href="#contact" onclick="document.getElementById('mobile-menu').classList.add('hidden')"
-                    class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Contact</a>
+                    class="block px-4 py-3 bg-cyan-500 text-white rounded-lg transition">Contact</a>
             </div>
         </div>
+    </nav>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center pt-16">
-        <div class="container mx-auto px-6 py-20 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-10 md:mb-0">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4 dark:text-white">
-                    <span data-lang="hero_greeting">Hi, I'm</span> <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">Umair
-                        Hussain</span>
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
+        <!-- Grid Background -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute inset-0" style="background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px); background-size: 50px 50px;"></div>
+        </div>
+
+        <!-- Gradient Orbs -->
+        <div class="absolute top-20 left-10 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="mb-8">
+                    <span class="inline-block px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
+                        Available for freelance work
+                    </span>
+                </div>
+
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+                    <span class="text-white">Building </span>
+                    <span class="text-cyan-400">digital</span>
+                    <span class="text-white"> experiences</span>
                 </h1>
-                <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-gray-600 dark:text-gray-300"
-                    data-lang="hero_title">
-                    Full Stack Web Developer
+
+                <h2 class="text-2xl md:text-3xl text-gray-400 mb-8 font-light">
+                    I'm Umair Hussain, a Full Stack Developer based in Islamabad
                 </h2>
-                <p class="text-lg mb-8 text-gray-600 dark:text-gray-300" data-lang="hero_description">
-                    I'm a passionate Full Stack Web Developer with 3.5+ years of experience crafting scalable web
-                    applications using Laravel,WordPress,MYSQL Full Command also on Frontend HTML, CSS, Bootstrap, Taliwind Css, Javascript, Git & github, Docker.
+
+                <p class="text-lg text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+                    I craft scalable web applications using Laravel, WordPress, and modern frontend technologies. 
+                    With 3.5+ years of experience, I transform ideas into powerful digital solutions.
                 </p>
-                <div class="flex space-x-4">
-                    <a href="#projects"
-                        class="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-medium hover:opacity-90 transition"
-                        data-lang="hero_view_work">
-                        View Work
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                    <a href="#projects" class="px-8 py-4 bg-cyan-500 text-white rounded-lg font-medium hover:bg-cyan-600 transition-all duration-300">
+                        View Projects
                     </a>
-                    <a href="#contact"
-                        class="px-6 py-3 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition"
-                        data-lang="hero_contact_me">
-                        Contact Me
+                    <a href="#contact" class="px-8 py-4 bg-gray-800 text-white rounded-lg font-medium hover:bg-gray-700 transition-all duration-300 border border-gray-700">
+                        Get in Touch
                     </a>
                 </div>
-            </div>
-            <div class="md:w-1/2 md:pl-10">
-                <div class="relative inline-block">
-                    <div
-                        class="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-3xl blur-xl opacity-40">
+
+                <!-- Stats -->
+                <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+                    <div>
+                        <div class="text-3xl md:text-4xl font-bold text-cyan-400">3.5+</div>
+                        <div class="text-gray-400 text-sm">Years Experience</div>
                     </div>
-                    <img src="best.png"
-                        alt="Professional developer working at a modern workspace with dual monitors and clean setup"
-                        class="relative rounded-2xl w-full max-w-md floating mx-auto" />
+                    <div>
+                        <div class="text-3xl md:text-4xl font-bold text-cyan-400">20+</div>
+                        <div class="text-gray-400 text-sm">Projects Completed</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl md:text-4xl font-bold text-cyan-400">20+</div>
+                        <div class="text-gray-400 text-sm">Happy Clients</div>
+                    </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-100 dark:bg-gray-800">
+    <section id="about" class="py-24">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4 dark:text-white" data-lang="about_title">About Me</h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-cyan-400 font-medium mb-4 block">About Me</span>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">
+                        Passionate about creating impactful digital solutions
+                    </h2>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        I'm a Full Stack Developer with 3.5+ years of experience building web applications that make a difference. 
+                        My journey in tech started with curiosity and has evolved into a career focused on delivering exceptional user experiences.
+                    </p>
+                    <p class="text-gray-400 mb-8 leading-relaxed">
+                        I specialize in Laravel, WordPress, and modern frontend technologies. I believe in clean code, 
+                        continuous learning, and turning complex problems into elegant solutions.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="border-l-2 border-cyan-500 pl-4">
+                            <div class="text-2xl font-bold text-white">3.5+</div>
+                            <div class="text-gray-400 text-sm">Years Experience</div>
+                        </div>
+                        <div class="border-l-2 border-cyan-500 pl-4">
+                            <div class="text-2xl font-bold text-white">20+</div>
+                            <div class="text-gray-400 text-sm">Projects Delivered</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="bg-gray-800 rounded-2xl p-8 border border-gray-700">
+                        <img src="best.png" alt="Umair Hussain" class="rounded-xl w-full" />
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-cyan-500 text-white p-6 rounded-xl">
+                        <div class="text-3xl font-bold">3.5+</div>
+                        <div class="text-sm">Years Exp</div>
+                    </div>
+                </div>
             </div>
 
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
-                    <img src="best.png" alt="Headshot of a professional developer smiling in a business casual outfit"
-                        class="rounded-xl w-full max-w-xs" />
-                </div>
-                <div class="md:w-2/3 md:pl-12">
-                    <h3 class="text-2xl font-semibold mb-6 dark:text-white" data-lang="about_who_i_am">Who I Am</h3>
-                    <p class="mb-6 text-gray-600 dark:text-gray-300" data-lang="about_description1">
-                        I'm a passionate Full Stack Developer with 3.5+ years of experience building web applications. My
-                        expertise lies in Laravel Framework, Wordpress,Mysql, Html, CSs, Bootstrap & Tailwind css , Ubuntu ,Docker, Git & Github.
-                    </p>
-                    <p class="mb-6 text-gray-600 dark:text-gray-300" data-lang="about_description2">
-                        I specialize in creating responsive, accessible, and performant web applications. My approach
-                        combines technical excellence with thoughtful design to deliver exceptional user experiences.
-                    </p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="flex items-start">
-                            <div class="mr-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-medium mb-1 dark:text-white" data-lang="about_problem_solver">Problem
-                                    Solver</h4>
-                                <p class="text-sm text-gray-600 dark:text-gray-300"
-                                    data-lang="about_problem_solver_desc">Creative solutions for complex challenges</p>
-                            </div>
+            <!-- Services -->
+            <div class="mt-24">
+                <h3 class="text-2xl font-bold mb-8 text-white text-center">What I Do</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300">
+                        <div class="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
                         </div>
-                        <div class="flex items-start">
-                            <div class="mr-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-medium mb-1 dark:text-white" data-lang="about_continuous_learner">
-                                    Continuous Learner</h4>
-                                <p class="text-sm text-gray-600 dark:text-gray-300"
-                                    data-lang="about_continuous_learner_desc">Always expanding my skills and knowledge
-                                </p>
-                            </div>
+                        <h4 class="text-lg font-semibold text-white mb-2">Web Development</h4>
+                        <p class="text-gray-400 text-sm">Building responsive and performant web applications with modern technologies</p>
+                    </div>
+                    <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300">
+                        <div class="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+                            </svg>
                         </div>
-                        <div class="flex items-start">
-                            <div class="mr-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-medium mb-1 dark:text-white" data-lang="about_team_player">Team Player
-                                </h4>
-                                <p class="text-sm text-gray-600 dark:text-gray-300" data-lang="about_team_player_desc">
-                                    Collaborative and effective communicator</p>
-                            </div>
+                        <h4 class="text-lg font-semibold text-white mb-2">Backend Development</h4>
+                        <p class="text-gray-400 text-sm">Creating robust APIs and database systems with Laravel and MySQL</p>
+                    </div>
+                    <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300">
+                        <div class="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
                         </div>
-                        <div class="flex items-start">
-                            <div class="mr-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-medium mb-1 dark:text-white" data-lang="about_detail_oriented">Detail
-                                    Oriented</h4>
-                                <p class="text-sm text-gray-600 dark:text-gray-300"
-                                    data-lang="about_detail_oriented_desc">Precision and quality in every line of code
-                                </p>
-                            </div>
-                        </div>
+                        <h4 class="text-lg font-semibold text-white mb-2">WordPress Solutions</h4>
+                        <p class="text-gray-400 text-sm">Custom themes, plugins, and eCommerce solutions for WordPress</p>
                     </div>
                 </div>
             </div>
@@ -204,303 +213,146 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-20">
+    <section id="experience" class="py-15 bg-gray-900/50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4 dark:text-white" data-lang="experience_title">Work Experience</h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
-                <p class="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto" data-lang="experience_description">
-                    My professional journey in web development, working with various technologies and frameworks.
-                </p>
+                <span class="text-cyan-400 font-medium mb-4 block">Experience</span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">Work History</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">My professional journey in web development</p>
             </div>
 
-            <div class="max-w-4xl mx-auto">
-                <!-- Current Job -->
-                <div
-                    class="experience-card bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 mb-6 border-l-4 border-green-500">
-                    <div class="flex flex-col md:flex-row md:justify-between mb-4">
-                        <div>
-                            <h3 class="text-xl font-semibold dark:text-white" data-lang="tryinotech_title">Full Stack
-                                Web Developer</h3>
-                            <p class="text-lg text-gray-600 dark:text-gray-300" data-lang="tryinotech_company">
-                                Tryinotech Pvt Ltd</p>
+            <div class="max-w-3xl mx-auto">
+                <!-- Timeline -->
+                <div class="relative">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-gray-700"></div>
 
-                            <p class="text-sm text-gray-500 dark:text-gray-400" data-lang="tryinotech_location">Kurri
-                                Road, Islamabad</p>
-                        </div>
-                        <div class="mt-2 md:mt-0 text-right">
-                            
-                            <span
-                                class="inline-block px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs rounded-full mb-2"
-                                >Current</span>
-                                  <p class="text-sm text-gray-500 dark:text-gray-400 bg-blue-100 dark:bg-blue-900 px-3 py-1 rounded-full mb-2" data-lang="experience_present">Join from <b>Jan 2024</b>
-                                 </p>
-                          
+                    <!-- Current Job -->
+                    <div class="relative mb-12">
+                        <div class="flex flex-col md:flex-row items-start">
+                            <div class="md:w-1/2 md:pr-8 md:text-right mb-4 md:mb-0">
+                                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+                                    <span class="text-cyan-400 text-sm font-medium">Jan 2024 - Present</span>
+                                    <h3 class="text-xl font-bold text-white mt-2">Full Stack Web Developer</h3>
+                                    <p class="text-gray-400">Tryinotech Pvt Ltd</p>
+                                    <p class="text-gray-500 text-sm mt-1">Kurri Road, Islamabad</p>
+                                    <div class="mt-4 flex flex-wrap gap-2 md:justify-end">
+                                        <span class="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded">Laravel</span>
+                                        <span class="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded">WordPress</span>
+                                        <span class="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded">MySQL</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-cyan-500 rounded-full border-4 border-gray-900"></div>
+                            <div class="md:w-1/2 md:pl-8"></div>
                         </div>
                     </div>
-                    <ul class="space-y-2 text-gray-600 dark:text-gray-300">
-                        <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <span data-lang="tryinotech_responsibility1">Developing and maintaining Laravel and
-                                WordPress websites for diverse clients</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <span data-lang="tryinotech_responsibility2">Learning and implementing NestJS framework for
-                                modern backend development</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <span data-lang="tryinotech_responsibility3">Building responsive and user-friendly web
-                                applications with modern technologies</span>
-                        </li>
-                    </ul>
-                    <div class="flex flex-wrap gap-2 mt-4">
-                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full">Laravel</span>
-                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-purple-200 text-xs rounded-full">MYSQL</span>
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs rounded-full">WordPress</span>
-                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full">HTML & CSS</span>
-                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-purple-200 text-xs rounded-full">Bootstrap & Tailwind CSS</span>
-                        <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs rounded-full">Ubuntu</span>
-                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full">git
-                            & github</span>
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs rounded-full">Docker</span>
-                    
-                    </div>
-                </div>
 
-                <!-- Previous Job -->
-                <div class="experience-card bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6  border-l-4 border-gray-400">
-                    <div class="flex flex-col gap-2 md:flex-row md:justify-between mb-4">
-                        <div>
-                            <h3 class="text-xl font-semibold dark:text-white" data-lang="bot_solutions_title">Full Stack
-                                Developer</h3>
-                            <p class="text-lg text-gray-600 dark:text-gray-300" data-lang="bot_solutions_company">Bot
-                                Solutions</p>
-                            <p class="text-sm text-gray-500 dark:text-gray-400" data-lang="bot_solutions_location">
-                                Shamshabad, Islamabad</p>
-                        </div>
-                        <div class="mt-2 md:mt-0 text-right">
-                            <p class="text-sm text-gray-500 dark:text-gray-400 bg-blue-100 dark:bg-blue-900 px-3 py-1 rounded-full mb-2">Duration <b> 11
-                                Months </b> </p>
-                                <span class="bg-green-100 dark:bg-green-900 px-3 py-1 rounded-full mb-2">Internship</span>
+                    <!-- Previous Job -->
+                    <div class="relative">
+                        <div class="flex flex-col md:flex-row items-start">
+                            <div class="md:w-1/2 md:pr-8"></div>
+                            <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-gray-600 rounded-full border-4 border-gray-900"></div>
+                            <div class="md:w-1/2 md:pl-8 mb-4 md:mb-0">
+                                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+                                    <span class="text-gray-400 text-sm font-medium">11 Months</span>
+                                    <h3 class="text-xl font-bold text-white mt-2">Full Stack Developer</h3>
+                                    <p class="text-gray-400">Bot Solutions</p>
+                                    <p class="text-gray-500 text-sm mt-1">Shamshabad, Islamabad</p>
+                                    <span class="inline-block mt-2 px-2 py-1 bg-gray-700 text-gray-400 text-xs rounded">Internship</span>
+                                    <div class="mt-4 flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 bg-gray-700 text-gray-400 text-xs rounded">Laravel</span>
+                                        <span class="px-2 py-1 bg-gray-700 text-gray-400 text-xs rounded">WordPress</span>
+                                        <span class="px-2 py-1 bg-gray-700 text-gray-400 text-xs rounded">Bootstrap</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <ul class="space-y-2 text-gray-600 dark:text-gray-300">
-                        <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <span data-lang="bot_solutions_responsibility2">Created custom WordPress themes and plugins
-                                for client websites</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <span data-lang="bot_solutions_responsibility3">Worked on frontend development using HTML,
-                                CSS, Bootstrap</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <span data-lang="bot_solutions_responsibility4">Collaborated with cross-functional teams to
-                                deliver high-quality web solutions</span>
-                        </li>
-                    </ul>
-                    <div class="flex flex-wrap gap-2 mt-4">
-                         <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full">Laravel</span>
-                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-purple-200 text-xs rounded-full">MYSQL</span>
-                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs rounded-full">WordPress</span>
-                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full">HTML & CSS</span>
-                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-purple-200 text-xs rounded-full">Bootstrap & Tailwind CSS</span>
-                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full">git
-                            & github</span>
-                        </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section  class="py-10">
+    <section class="py-24 bg-gray-900/50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4 dark:text-white" data-lang="skills_title">My Skills</h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+                <span class="text-cyan-400 font-medium mb-4 block">Skills</span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">Technologies & Tools</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">My technical expertise and professional skills</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="skill-card bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm">
-                    <h3 class="text-xl font-semibold mb-6 dark:text-white" data-lang="skills_technical">Technical Skills
-                    </h3>
-                    <div class="space-y-6">
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium dark:text-white">Laravel</span>
-                                <span class="text-gray-500 dark:text-gray-400">95%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                                <div class="progress-bar bg-gradient-to-r from-blue-500 to-blue-400 h-2.5 rounded-full"
-                                    style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium dark:text-white">MYSQL</span>
-                                <span class="text-gray-500 dark:text-gray-400">95%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                                <div class="progress-bar bg-gradient-to-r from-blue-500 to-blue-400 h-2.5 rounded-full"
-                                    style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium dark:text-white">HTML, CSS & Bootstrap</span>
-                                <span class="text-gray-500 dark:text-gray-400">95%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                                <div class="progress-bar bg-gradient-to-r from-blue-500 to-blue-400 h-2.5 rounded-full"
-                                    style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium dark:text-white">React js</span>
-                                <span class="text-gray-500 dark:text-gray-400">70%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                                <div class="progress-bar bg-gradient-to-r from-blue-500 to-blue-400 h-2.5 rounded-full"
-                                    style="width: 70%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium dark:text-white">Wordpress</span>
-                                <span class="text-gray-500 dark:text-gray-400">85%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                                <div class="progress-bar bg-gradient-to-r from-blue-500 to-blue-400 h-2.5 rounded-full"
-                                    style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium dark:text-white">Git & github</span>
-                                <span class="text-gray-500 dark:text-gray-400">90%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                                <div class="progress-bar bg-gradient-to-r from-blue-500 to-blue-400 h-2.5 rounded-full"
-                                    style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium dark:text-white">Ubuntu</span>
-                                <span class="text-gray-500 dark:text-gray-400">80%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                                <div class="progress-bar bg-gradient-to-r from-blue-500 to-blue-400 h-2.5 rounded-full"
-                                    style="width: 80%"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium dark:text-white">Docker</span>
-                                <span class="text-gray-500 dark:text-gray-400">85%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                                <div class="progress-bar bg-gradient-to-r from-blue-500 to-blue-400 h-2.5 rounded-full"
-                                    style="width: 80%"></div>
-                            </div>
-                        </div>
-
-
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium dark:text-white">Cpanel & Deployments</span>
-                                <span class="text-gray-500 dark:text-gray-400">85%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                                <div class="progress-bar bg-gradient-to-r from-blue-500 to-blue-400 h-2.5 rounded-full"
-                                    style="width: 80%"></div>
-                            </div>
-                        </div>
-
-
-                    </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 text-center group">
+                    <div class="text-4xl mb-3">🔷</div>
+                    <h3 class="font-semibold text-white">Laravel</h3>
+                    <p class="text-cyan-400 text-sm mt-1">Expert</p>
                 </div>
-                <div class="skill-card bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm">
-                    <h3 class="text-xl font-semibold mb-6 dark:text-white" data-lang="skills_professional">Professional
-                        Skills</h3>
-                    <div class="space-y-6">
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium dark:text-white">Communication</span>
-                                <span class="text-gray-500 dark:text-gray-400">90%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                                <div class="progress-bar bg-gradient-to-r from-purple-600 to-purple-500 h-2.5 rounded-full"
-                                    style="width: 90%"></div>
-                            </div>
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 text-center group">
+                    <div class="text-4xl mb-3">🗄️</div>
+                    <h3 class="font-semibold text-white">MySQL</h3>
+                    <p class="text-cyan-400 text-sm mt-1">Expert</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 text-center group">
+                    <div class="text-4xl mb-3">📝</div>
+                    <h3 class="font-semibold text-white">WordPress</h3>
+                    <p class="text-cyan-400 text-sm mt-1">Advanced</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 text-center group">
+                    <div class="text-4xl mb-3">📱</div>
+                    <h3 class="font-semibold text-white">Flutter</h3>
+                    <p class="text-cyan-400 text-sm mt-1">Intermediate</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 text-center group">
+                    <div class="text-4xl mb-3">🎨</div>
+                    <h3 class="font-semibold text-white">Tailwind CSS</h3>
+                    <p class="text-cyan-400 text-sm mt-1">Expert</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 text-center group">
+                    <div class="text-4xl mb-3">🐙</div>
+                    <h3 class="font-semibold text-white">Git & GitHub</h3>
+                    <p class="text-cyan-400 text-sm mt-1">Advanced</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 text-center group">
+                    <div class="text-4xl mb-3">🐳</div>
+                    <h3 class="font-semibold text-white">Docker</h3>
+                    <p class="text-cyan-400 text-sm mt-1">Advanced</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 text-center group">
+                    <div class="text-4xl mb-3">🐧</div>
+                    <h3 class="font-semibold text-white">Ubuntu</h3>
+                    <p class="text-cyan-400 text-sm mt-1">Advanced</p>
+                </div>
+            </div>
+
+            <!-- Professional Skills -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold mb-8 text-white text-center">Professional Skills</h3>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="w-24 h-24 mx-auto mb-4 rounded-full border-4 border-cyan-500 flex items-center justify-center">
+                            <span class="text-2xl font-bold text-cyan-400">90%</span>
                         </div>
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium dark:text-white">Teamwork</span>
-                                <span class="text-gray-500 dark:text-gray-400">85%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                                <div class="progress-bar bg-gradient-to-r from-purple-600 to-purple-500 h-2.5 rounded-full"
-                                    style="width: 85%"></div>
-                            </div>
+                        <h4 class="font-semibold text-white">Communication</h4>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-24 h-24 mx-auto mb-4 rounded-full border-4 border-cyan-500 flex items-center justify-center">
+                            <span class="text-2xl font-bold text-cyan-400">85%</span>
                         </div>
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium dark:text-white">Project Management</span>
-                                <span class="text-gray-500 dark:text-gray-400">75%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                                <div class="progress-bar bg-gradient-to-r from-purple-600 to-purple-500 h-2.5 rounded-full"
-                                    style="width: 75%"></div>
-                            </div>
+                        <h4 class="font-semibold text-white">Teamwork</h4>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-24 h-24 mx-auto mb-4 rounded-full border-4 border-cyan-500 flex items-center justify-center">
+                            <span class="text-2xl font-bold text-cyan-400">75%</span>
                         </div>
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium dark:text-white">Creativity</span>
-                                <span class="text-gray-500 dark:text-gray-400">80%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                                <div class="progress-bar bg-gradient-to-r from-purple-600 to-purple-500 h-2.5 rounded-full"
-                                    style="width: 80%"></div>
-                            </div>
+                        <h4 class="font-semibold text-white">Project Management</h4>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-24 h-24 mx-auto mb-4 rounded-full border-4 border-cyan-500 flex items-center justify-center">
+                            <span class="text-2xl font-bold text-cyan-400">80%</span>
                         </div>
+                        <h4 class="font-semibold text-white">Creativity</h4>
                     </div>
                 </div>
             </div>
@@ -508,197 +360,142 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gray-100 dark:bg-gray-800">
+    <section id="projects" class="py-15 bg-gray-900/50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4 dark:text-white" data-lang="projects_title">My Projects</h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
-                <p class="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto" data-lang="projects_description">
-                    Here are some of my recent projects. Each one demonstrates different aspects of my skills and
-                    expertise.
-                </p>
+                <span class="text-cyan-400 font-medium mb-4 block">Projects</span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">Featured Work</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">A selection of my recent projects and achievements</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1 -->
-                <div
-                    class="project-card bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-sm transition cursor-pointer">
-                    <div class="project-image overflow-hidden">
-                        <img src="molar.PNG"
-                            alt="Modern e-commerce dashboard with analytics charts and product listings"
-                            class="w-full h-48 object-cover" />
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 dark:text-white" data-lang="project1_title">Dental
-                            Managment System</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4" data-lang="project1_description">
-                            Comprehensive analytics dashboard for Dental Managment System with Laravel and React js with
-                            interactive charts.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span
-                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full">Laravel</span>
-                            <span
-                                class="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 text-xs rounded-full">Bootstrap</span>
-                            <span
-                                class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 text-xs rounded-full">React</span>
-                            <span
-                                class="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 text-xs rounded-full">Inertia
-                                js</span>
+                <div class="group">
+                    <div class="relative overflow-hidden rounded-xl mb-4">
+                        <img src="blackblastai.png" alt="Dental Management System" class="w-full h-100 object-cover transform group-hover:scale-110 transition-transform duration-500" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <a href="https://blockblast.ai/public/" class="inline-block px-4 py-2 bg-cyan-500 text-white text-sm rounded-lg">View Project</a>
                         </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">ERP System for Blackblast.ai</h3>
+                    <p class="text-gray-400 text-sm mb-3">Complete ERP System for Blackblast.ai with all features and functionality trust wallet intergration use web3 integration and wallet connect adding plane dealing.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs text-gray-500">Laravel</span>
+                        <span class="text-xs text-gray-500">•</span>
+                        <span class="text-xs text-gray-500">Mysql</span>
+                        <span class="text-xs text-gray-500">•</span>
+                        <span class="text-xs text-gray-500">Bootstrap</span>
+                         <span class="text-xs text-gray-500">•</span>
+                        <span class="text-xs text-gray-500">Trust Wallet Integration</span>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
-                <div
-                    class="project-card bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-sm transition cursor-pointer">
-                    <div class="project-image overflow-hidden">
-                        <img src="cms.PNG"
-                            alt="Collaborative task management web application interface with drag and drop functionality"
-                            class="w-full h-48 object-cover" />
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 dark:text-white" data-lang="project2_title">CMS Dashboard
-                        </h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4" data-lang="project2_description">
-                            Creating a comprehensive analytics dashboard with full Functionality like Full Crud
-                            Operation & Peremission and Role.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span
-                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full">Laravel</span>
-                            <span
-                                class="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 text-xs rounded-full">Bootstrap</span>
-                            <span
-                                class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 text-xs rounded-full">Html
-                                & Css</span>
+                <div class="group">
+                    <div class="relative overflow-hidden rounded-xl mb-4">
+                        <img src="cms.png" alt="CMS Dashboard" class="w-full h-100 object-cover transform group-hover:scale-110 transition-transform duration-500" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <a href="https://pms.alphaengineeringconsultants.com/" class="inline-block px-4 py-2 bg-cyan-500 text-white text-sm rounded-lg">View Project</a>
                         </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Full ERP System For AEC</h3>
+                    <p class="text-gray-400 text-sm mb-3">Complete Full ERP system for AEC company  with permissions and role management</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs text-gray-500">Laravel</span>
+                        <span class="text-xs text-gray-500">•</span>
+                        <span class="text-xs text-gray-500">Bootstrap</span>
+                        <span class="text-xs text-gray-500">•</span>
+                        <span class="text-xs text-gray-500">MySQL</span>
+                        <span class="text-xs text-gray-500">•</span>
+                        <span class="text-xs text-gray-500">Twilio for whatsapp messages</span>
                     </div>
                 </div>
 
                 <!-- Project 3 -->
-                <div
-                    class="project-card bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-sm transition cursor-pointer">
-                    <div class="project-image overflow-hidden">
-                        <img src="wordpress.PNG"
-                            alt="Mobile banking application interface showing transaction history and fund transfer options"
-                            class="w-full h-48 object-cover" />
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 dark:text-white" data-lang="project3_title">Wordpress
-                            eCommerce Website</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4" data-lang="project3_description">
-                            A responsive and secure WordPress-based online store with integrated payment gateways,
-                            product management, and user-friendly shopping experience.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span
-                                class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs rounded-full">Wordpress</span>
-                            <span
-                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full">Elementor</span>
-                            <span
-                                class="px-3 py-1 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs rounded-full">Html
-                                & Css</span>
+                <div class="group">
+                    <div class="relative overflow-hidden rounded-xl mb-4">
+                        <img src="tryinohomes.png" alt="WordPress eCommerce" class="w-full h-100 object-cover transform group-hover:scale-110 transition-transform duration-500" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <a href="https://tryinohomes.com/" class="inline-block px-4 py-2 bg-cyan-500 text-white text-sm rounded-lg">View Project</a>
                         </div>
                     </div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">WordPress Website</h3>
+                    <p class="text-gray-400 text-sm mb-3">Complete Wordress Website using Elementor Contain around 15+ pages.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs text-gray-500">WordPress</span>
+                        <span class="text-xs text-gray-500">•</span>
+                        <span class="text-xs text-gray-500">Elementor</span>
+                        <span class="text-xs text-gray-500">•</span>
+                        <span class="text-xs text-gray-500">WooCommerce</span>
+                    </div>
                 </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="https://www.linkedin.com/in/umair-hussain-dev/details/projects/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BjgKCODRnSC%2BkgL%2Ff0NEG6A%3D%3D" class="inline-flex items-center px-6 py-3 border border-gray-700 text-white rounded-lg hover:border-cyan-500 hover:text-cyan-400 transition-all duration-300">
+                    For All Project Click Go to Linkdln
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20">
+    <section id="contact" class="py-24">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4 dark:text-white" data-lang="contact_title">Get In Touch</h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
-                <p class="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto" data-lang="contact_description">
-                    Have a project in mind or want to discuss potential opportunities? Feel free to reach out!
-                </p>
+                <span class="text-cyan-400 font-medium mb-4 block">Contact</span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">Let's Work Together</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Have a project in mind? Let's create something amazing together.</p>
             </div>
 
-            <div class="max-w-3xl mx-auto">
-                <!-- Contact form commented out - replaced with social links -->
-                <!-- 
-                <form id="contact-form" class="space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Name</label>
-                            <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:ring-2 focus:ring-blue-500 focus:border-transparent transition" required>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300">
+                        <div class="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
                         </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:ring-2 focus:ring-blue-500 focus:border-transparent transition" required>
-                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Email</h3>
+                        <a href="mailto:umairsb84@gmail.com" class="text-gray-400 hover:text-cyan-400 transition">umairsb84@gmail.com</a>
                     </div>
-                    <div>
-                        <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Subject</label>
-                        <input type="text" id="subject" name="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:ring-2 focus:ring-blue-500 focus:border-transparent transition" required>
-                    </div>
-                    <div>
-                        <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Message</label>
-                        <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:ring-2 focus:ring-blue-500 focus:border-transparent transition" required></textarea>
-                    </div>
-                    <div>
-                        <button type="submit" class="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium rounded-lg hover:opacity-90 transition focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900">
-                            Send Message
-                        </button>
-                    </div>
-                </form>
 
-                <div id="form-success" class="hidden mt-8 p-4 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-lg">
-                    Your message has been sent successfully! I'll get back to you soon.
+                    <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300">
+                        <div class="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Location</h3>
+                        <p class="text-gray-400">Islamabad, Pakistan</p>
+                    </div>
+
+                    <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300">
+                        <div class="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Response Time</h3>
+                        <p class="text-gray-400">Within 24 hours</p>
+                    </div>
                 </div>
-                -->
 
-                <!-- Social Media Links -->
-                <div class="text-center">
-                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-8" data-lang="contact_connect">
-                        Connect with me on social media or reach out via email:
-                    </p>
-
-                    <div class="flex justify-center space-x-6 mb-8">
-                        <!-- GitHub -->
-                        <a href="https://github.com/UmairYousafzia" target="_blank"
-                            class="group bg-gray-800 dark:bg-gray-700 p-4 rounded-full hover:bg-gray-700 dark:hover:bg-gray-600 transition-all duration-300 hover:scale-110">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="h-8 w-8 text-gray-300 group-hover:text-white transition" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
+                <div class="mt-12 text-center">
+                    <h3 class="text-xl font-bold text-white mb-6">Connect on Social Media</h3>
+                    <div class="flex justify-center space-x-6">
+                        <a href="https://github.com/UmairYousafzia" target="_blank" class="w-14 h-14 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-cyan-500 transition-colors">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                         </a>
-
-                        <!-- LinkedIn -->
-                        <a href="https://www.linkedin.com/in/umair-hussain-dev/" target="_blank"
-                            class="group bg-blue-600 p-4 rounded-full hover:bg-blue-700 transition-all duration-300 hover:scale-110">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="h-8 w-8 text-white group-hover:text-blue-100 transition" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                            </svg>
-                        </a>
-
-                        <!-- Twitter -->
-                        <a href="#" target="_blank"
-                            class="group bg-sky-500 p-4 rounded-full hover:bg-sky-600 transition-all duration-300 hover:scale-110">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="h-8 w-8 text-white group-hover:text-sky-100 transition" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
-                            </svg>
-                        </a>
-                    </div>
-
-                    <!-- Email Contact -->
-                    <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 text-center">
-                        <p class="text-gray-600 dark:text-gray-300 mb-2" data-lang="contact_email_me">Email me directly:
-                        </p>
-                        <a href="mailto:umairsb84@gmail.com"
-                            class="text-xl font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition">
-                            umairsb84@gmail.com
+                        <a href="https://www.linkedin.com/in/umair-hussain-dev/" target="_blank" class="w-14 h-14 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-cyan-500 transition-colors">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                         </a>
                     </div>
                 </div>
@@ -706,38 +503,89 @@
         </div>
     </section>
 
+    <!-- AI Assistant Chat Widget -->
+    <div id="ai-assistant" class="fixed bottom-6 right-6 z-50">
+        <!-- Chat Button -->
+        <button id="chat-toggle" onclick="toggleChat()" class="w-14 h-14 bg-cyan-500 rounded-full shadow-lg hover:bg-cyan-600 transition-all duration-300 hover:scale-110 flex items-center justify-center">
+            <svg id="chat-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+            </svg>
+            <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+        <!-- Chat Window -->
+        <div id="chat-window" class="hidden absolute bottom-20 right-0 w-80 bg-gray-800 rounded-xl shadow-2xl overflow-hidden border border-gray-700">
+            <!-- Chat Header -->
+            <div class="bg-gray-900 p-4 border-b border-gray-700">
+                <div class="flex items-center">
+                    <div class="w-8 h-8 bg-cyan-500 rounded-lg flex items-center justify-center mr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold text-sm">AI Assistant</h3>
+                        <p class="text-gray-400 text-xs">Ask me about Umair</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Messages -->
+            <div id="chat-messages" class="h-64 overflow-y-auto p-4 space-y-3">
+                <!-- Welcome Message -->
+                <div class="flex items-start">
+                    <div class="w-8 h-8 bg-cyan-500 rounded-lg flex items-center justify-center mr-2 flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="bg-gray-700 rounded-lg p-3 max-w-xs">
+                        <p class="text-gray-200 text-xs">Hi! I'm Umair's AI assistant. Feel free to ask me about his skills, experience, projects, or how to contact him!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Action Buttons -->
+            <div class="p-3 border-t border-gray-700 bg-gray-900">
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="sendQuickMessage('skills')" class="px-3 py-2 bg-gray-800 text-gray-300 rounded-lg hover:bg-cyan-500 hover:text-white transition text-xs font-medium">
+                        Skills
+                    </button>
+                    <button onclick="sendQuickMessage('experience')" class="px-3 py-2 bg-gray-800 text-gray-300 rounded-lg hover:bg-cyan-500 hover:text-white transition text-xs font-medium">
+                        Experience
+                    </button>
+                    <button onclick="sendQuickMessage('projects')" class="px-3 py-2 bg-gray-800 text-gray-300 rounded-lg hover:bg-cyan-500 hover:text-white transition text-xs font-medium">
+                        Projects
+                    </button>
+                    <button onclick="sendQuickMessage('contact')" class="px-3 py-2 bg-gray-800 text-gray-300 rounded-lg hover:bg-cyan-500 hover:text-white transition text-xs font-medium">
+                        Contact
+                    </button>
+                    <button onclick="sendQuickMessage('about')" class="px-3 py-2 bg-gray-800 text-gray-300 rounded-lg hover:bg-cyan-500 hover:text-white transition text-xs font-medium col-span-2">
+                        About Umair
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
-    <footer class="py-10 bg-gray-800 text-gray-300">
+    <footer class="py-12 bg-gray-900 border-t border-gray-800">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-6 md:mb-0">
-                    <a href="#"
-                        class="text-5xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 p-2"
-                        style="font-family: 'Great Vibes', cursive;">
-                        Umair Hussain
+                    <a href="#" class="text-2xl font-bold text-white">
+                        <span class="text-cyan-400 mx-1">Umair</span>Hussain
                     </a>
-                    <p class="mt-2 text-sm" data-lang="footer_copyright">© umairsb84@gmail.com 2025</p>
+                    <p class="mt-2 text-gray-400 text-sm">© 2025 All rights reserved</p>
                 </div>
                 <div class="flex space-x-6">
-                    <a href="https://github.com/UmairYousafzia" class="text-gray-400 hover:text-white transition">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                        </svg>
+                    <a href="https://github.com/UmairYousafzia" target="_blank" class="text-gray-400 hover:text-cyan-400 transition">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                     </a>
-
-                    <a href="https://www.linkedin.com/in/umair-hussain-dev/"
-                        class="text-gray-400 hover:text-white transition">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                        </svg>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
-                        </svg>
+                    <a href="https://www.linkedin.com/in/umair-hussain-dev/" target="_blank" class="text-gray-400 hover:text-cyan-400 transition">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                     </a>
                 </div>
             </div>
@@ -758,7 +606,39 @@
             setupSmoothScrolling();
             animateProgressBars();
             setupContactForm();
+            setupScrollReveal();
         });
+
+        // Scroll Reveal Animations
+        function setupScrollReveal() {
+            ScrollReveal().reveal('.reveal', {
+                duration: 1000,
+                distance: '50px',
+                origin: 'bottom',
+                opacity: 0,
+                easing: 'ease-out',
+                delay: 200,
+                interval: 200
+            });
+
+            ScrollReveal().reveal('.reveal-left', {
+                duration: 1000,
+                distance: '50px',
+                origin: 'left',
+                opacity: 0,
+                easing: 'ease-out',
+                delay: 200
+            });
+
+            ScrollReveal().reveal('.reveal-right', {
+                duration: 1000,
+                distance: '50px',
+                origin: 'right',
+                opacity: 0,
+                easing: 'ease-out',
+                delay: 200
+            });
+        }
 
         // Change language function
         function changeLanguage(lang) {
@@ -919,6 +799,92 @@
                         formSuccess.classList.add('hidden');
                     }, 5000);
                 });
+            }
+        }
+
+        // AI Assistant Functions
+        function toggleChat() {
+            const chatWindow = document.getElementById('chat-window');
+            const chatIcon = document.getElementById('chat-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            chatWindow.classList.toggle('hidden');
+            chatIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        }
+
+        function sendQuickMessage(topic) {
+            // Add user message to chat based on button clicked
+            let userMessage = '';
+            switch(topic) {
+                case 'skills':
+                    userMessage = 'What are Umair\'s skills?';
+                    break;
+                case 'experience':
+                    userMessage = 'Tell me about Umair\'s experience';
+                    break;
+                case 'projects':
+                    userMessage = 'What projects has Umair worked on?';
+                    break;
+                case 'contact':
+                    userMessage = 'How can I contact Umair?';
+                    break;
+                case 'about':
+                    userMessage = 'Tell me about Umair';
+                    break;
+            }
+
+            addMessage(userMessage, 'user');
+
+            // Simulate AI response
+            setTimeout(() => {
+                const response = getAIResponse(topic);
+                addMessage(response, 'ai');
+            }, 500);
+        }
+
+        function addMessage(message, sender) {
+            const chatMessages = document.getElementById('chat-messages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'flex items-start';
+
+            if (sender === 'user') {
+                messageDiv.innerHTML = `
+                    <div class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg p-3 max-w-xs ml-auto">
+                        <p class="text-sm">${message}</p>
+                    </div>
+                `;
+            } else {
+                messageDiv.innerHTML = `
+                    <div class="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="bg-gray-700 rounded-lg p-3 max-w-xs">
+                        <p class="text-gray-200 text-sm">${message}</p>
+                    </div>
+                `;
+            }
+
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function getAIResponse(topic) {
+            switch(topic) {
+                case 'skills':
+                    return "Umair is proficient in Laravel (95%), MySQL (95%), HTML/CSS/Bootstrap (95%), Flutter (70%), WordPress (85%), Git & GitHub (90%), Ubuntu (80%), Docker (85%), and cPanel & Deployments (85%). He's also skilled in communication, teamwork, project management, and creativity.";
+                case 'experience':
+                    return "Umair currently works as a Full Stack Web Developer at Tryinotech Pvt Ltd in Islamabad since January 2024. Previously, he completed an 11-month internship at Bot Solutions in Islamabad. He has 3.5+ years of experience in web development.";
+                case 'projects':
+                    return "Umair has worked on several projects including a Dental Management System with Laravel and Flutter, a CMS Dashboard with full CRUD operations, and a WordPress eCommerce website. You can see more details in the Projects section!";
+                case 'contact':
+                    return "You can contact Umair via email at umairsb84@gmail.com. He's also active on GitHub (UmairYousafzia) and LinkedIn (umair-hussain-dev/). Check the Contact section for more details!";
+                case 'about':
+                    return "Umair Hussain is a passionate Full Stack Web Developer with 3.5+ years of experience. He specializes in Laravel, WordPress, MySQL, and modern frontend technologies. He's a problem solver, continuous learner, team player, and detail-oriented developer.";
+                default:
+                    return "I can help you learn about Umair's skills, experience, projects, or contact information. What would you like to know?";
             }
         }
     </script>
