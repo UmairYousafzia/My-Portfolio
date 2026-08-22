@@ -163,8 +163,8 @@
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
-  width: 10px;
-  height: 10px;
+  width: 22px;
+  height: 22px;
   background-color:#fff;
   border-radius: 50%;
 }
@@ -229,14 +229,14 @@ body.bulb-on .bg-cyan-500 {
 @media (max-width: 640px) {
   .bulb-container {
     top: 160px;
-    left: 35%;
+    left: 39%;
     transform: scale(0.7);
     transform-origin: top left;
   }
 
   .string-instruction {
     top: 360px;
-    left: 16%;
+    left: 20%;
   }
   .ava {
     margin-bottom: 329px !important;
@@ -249,11 +249,23 @@ body.bulb-on .bg-cyan-500 {
     width: 20px!important;
     height: 20px!important;
   }
+   string-container::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 555;
+ }
 }
 @media (max-width: 380px) {
  .bulb-container {
     top: 160px;
-    left: 38%;
+    left: 39%;
     transform: scale(0.7);
     transform-origin: top left;
   }
@@ -266,11 +278,16 @@ body.bulb-on .bg-cyan-500 {
     margin-bottom: 329px !important;
     margin-top: -30px!important;
   }
-  .string {
-    z-index: 500;
-  }
-  .string-circle {
-    width: 20px!important;
-    height: 20px!important;
-  }
+ string-container::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 555;
+ }
 }
