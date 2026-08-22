@@ -7,6 +7,7 @@
     <title>Professional Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="style.css">
 
     <!-- Add in <head> -->
     <!-- In <head> -->
@@ -15,13 +16,14 @@
 </head>
 
 <body class="bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 text-white transition-colors duration-300 font-sans" style="font-family: 'Inter', sans-serif;">
+      
     <!-- Navigation -->
     <header class="fixed w-full bg-gray-900/95 backdrop-blur-lg z-50 border-b border-gray-800/50">
         <nav class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <a href="#"
                     class="text-2xl font-bold text-white tracking-tight">
-                    <span class="text-cyan-400 mx-1">Umair</span>Hussain
+                    <span class="text-yellow-400 mx-1">Ful Stack</span>Development
                 </a>
 
                 <div class="hidden md:flex items-center space-x-1">
@@ -65,7 +67,29 @@
         </div>
     </nav>
     </header>
+  <!-- my bulb -->
+    <div class="bulb-container">
+        <div id="bulb" class="bulb">
+          <div class="filament"></div>
+        </div>
+        <div class="base">
+          <div class="base-segment"></div>
+          <div class="base-segment"></div>
+          <div class="base-segment"></div>  
+        </div>
+        <div id="string" class="string-container">
+          <div class="string-circle"></div>
+        </div>
+      </div>
 
+    <div class="string-instruction">
+        <div class="arrow">↑</div>
+    <p>Tap or pull down string💡</p>
+  <small>Let’s light up the moment together ✨</small>
+
+</div>
+
+<div class="string-container"></div>
     <!-- Hero Section -->
     <section id="home" class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
         <!-- Grid Background -->
@@ -79,15 +103,15 @@
 
         <div class="container mx-auto px-6 relative z-10">
             <div class="max-w-4xl mx-auto text-center">
-                <div class="mb-8">
-                    <span class="inline-block px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
+                <div class="mb-8 ava">
+                    <span class="inline-block px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-yellow-400 text-sm font-medium mb-6">
                         Available for freelance work
                     </span>
                 </div>
 
                 <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
                     <span class="text-white">Building </span>
-                    <span class="text-cyan-400">digital</span>
+                    <span class="text-yellow-400">digital</span>
                     <span class="text-white"> experiences</span>
                 </h1>
 
@@ -112,15 +136,15 @@
                 <!-- Stats -->
                 <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
                     <div>
-                        <div class="text-3xl md:text-4xl font-bold text-cyan-400">3.5+</div>
+                        <div class="text-3xl md:text-4xl font-bold text-yellow-400">3.5+</div>
                         <div class="text-gray-400 text-sm">Years Experience</div>
                     </div>
                     <div>
-                        <div class="text-3xl md:text-4xl font-bold text-cyan-400">20+</div>
+                        <div class="text-3xl md:text-4xl font-bold text-yellow-400">20+</div>
                         <div class="text-gray-400 text-sm">Projects Completed</div>
                     </div>
                     <div>
-                        <div class="text-3xl md:text-4xl font-bold text-cyan-400">20+</div>
+                        <div class="text-3xl md:text-4xl font-bold text-yellow-400">20+</div>
                         <div class="text-gray-400 text-sm">Happy Clients</div>
                     </div>
                 </div>
@@ -140,7 +164,7 @@
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div>
-                    <span class="text-cyan-400 font-medium mb-4 block">About Me</span>
+                    <span class="text-yellow-400 font-medium mb-4 block">About Me</span>
                     <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">
                         Passionate about creating impactful digital solutions
                     </h2>
@@ -182,7 +206,7 @@
                 <div class="grid md:grid-cols-3 gap-6">
                     <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300">
                         <div class="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
-                            <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                             </svg>
                         </div>
@@ -191,7 +215,7 @@
                     </div>
                     <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300">
                         <div class="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
-                            <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
                             </svg>
                         </div>
@@ -200,7 +224,7 @@
                     </div>
                     <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300">
                         <div class="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
-                            <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                             </svg>
                         </div>
@@ -216,7 +240,7 @@
     <section id="experience" class="py-15 bg-gray-900/50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <span class="text-cyan-400 font-medium mb-4 block">Experience</span>
+                <span class="text-yellow-400 font-medium mb-4 block">Experience</span>
                 <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">Work History</h2>
                 <p class="text-gray-400 max-w-2xl mx-auto">My professional journey in web development</p>
             </div>
@@ -232,14 +256,16 @@
                         <div class="flex flex-col md:flex-row items-start">
                             <div class="md:w-1/2 md:pr-8 md:text-right mb-4 md:mb-0">
                                 <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
-                                    <span class="text-cyan-400 text-sm font-medium">Jan 2024 - Present</span>
+                                    <span class="text-yellow-400 text-sm font-medium">Jan 2024 - Present</span>
                                     <h3 class="text-xl font-bold text-white mt-2">Full Stack Web Developer</h3>
                                     <p class="text-gray-400">Tryinotech Pvt Ltd</p>
                                     <p class="text-gray-500 text-sm mt-1">Kurri Road, Islamabad</p>
                                     <div class="mt-4 flex flex-wrap gap-2 md:justify-end">
-                                        <span class="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded">Laravel</span>
-                                        <span class="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded">WordPress</span>
-                                        <span class="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded">MySQL</span>
+                                        <span class="px-2 py-1 bg-cyan-500/20 text-yellow-400 text-xs rounded">Laravel</span>
+                                        <span class="px-2 py-1 bg-cyan-500/20 text-yellow-400 text-xs rounded">WordPress</span>
+                                        <span class="px-2 py-1 bg-cyan-500/20 text-yellow-400 text-xs rounded">MySQL</span>
+                                        <span class="px-2 py-1 bg-cyan-500/20 text-yellow-400 text-xs rounded">DevOps</span>
+                                        <span class="px-2 py-1 bg-cyan-500/20 text-yellow-400 text-xs rounded">Data Analyst</span>
                                     </div>
                                 </div>
                             </div>
@@ -278,7 +304,7 @@
     <section class="py-24 bg-gray-900/50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <span class="text-cyan-400 font-medium mb-4 block">Skills</span>
+                <span class="text-yellow-400 font-medium mb-4 block">Skills</span>
                 <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">Technologies & Tools</h2>
                 <p class="text-gray-400 max-w-2xl mx-auto">My technical expertise and professional skills</p>
             </div>
@@ -287,42 +313,42 @@
                 <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 text-center group">
                     <div class="text-4xl mb-3">🔷</div>
                     <h3 class="font-semibold text-white">Laravel</h3>
-                    <p class="text-cyan-400 text-sm mt-1">Expert</p>
+                    <p class="text-yellow-400 text-sm mt-1">Expert</p>
                 </div>
                 <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 text-center group">
                     <div class="text-4xl mb-3">🗄️</div>
                     <h3 class="font-semibold text-white">MySQL</h3>
-                    <p class="text-cyan-400 text-sm mt-1">Expert</p>
+                    <p class="text-yellow-400 text-sm mt-1">Expert</p>
                 </div>
                 <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 text-center group">
                     <div class="text-4xl mb-3">📝</div>
                     <h3 class="font-semibold text-white">WordPress</h3>
-                    <p class="text-cyan-400 text-sm mt-1">Advanced</p>
+                    <p class="text-yellow-400 text-sm mt-1">Advanced</p>
                 </div>
                 <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 text-center group">
                     <div class="text-4xl mb-3">📱</div>
                     <h3 class="font-semibold text-white">Flutter</h3>
-                    <p class="text-cyan-400 text-sm mt-1">Intermediate</p>
+                    <p class="text-yellow-400 text-sm mt-1">Intermediate</p>
                 </div>
                 <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 text-center group">
                     <div class="text-4xl mb-3">🎨</div>
                     <h3 class="font-semibold text-white">Tailwind CSS</h3>
-                    <p class="text-cyan-400 text-sm mt-1">Expert</p>
+                    <p class="text-yellow-400 text-sm mt-1">Expert</p>
                 </div>
                 <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 text-center group">
                     <div class="text-4xl mb-3">🐙</div>
                     <h3 class="font-semibold text-white">Git & GitHub</h3>
-                    <p class="text-cyan-400 text-sm mt-1">Advanced</p>
+                    <p class="text-yellow-400 text-sm mt-1">Advanced</p>
                 </div>
                 <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 text-center group">
                     <div class="text-4xl mb-3">🐳</div>
                     <h3 class="font-semibold text-white">Docker</h3>
-                    <p class="text-cyan-400 text-sm mt-1">Advanced</p>
+                    <p class="text-yellow-400 text-sm mt-1">Advanced</p>
                 </div>
                 <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 text-center group">
                     <div class="text-4xl mb-3">🐧</div>
                     <h3 class="font-semibold text-white">Ubuntu</h3>
-                    <p class="text-cyan-400 text-sm mt-1">Advanced</p>
+                    <p class="text-yellow-400 text-sm mt-1">Advanced</p>
                 </div>
             </div>
 
@@ -332,25 +358,25 @@
                 <div class="grid md:grid-cols-4 gap-6">
                     <div class="text-center">
                         <div class="w-24 h-24 mx-auto mb-4 rounded-full border-4 border-cyan-500 flex items-center justify-center">
-                            <span class="text-2xl font-bold text-cyan-400">90%</span>
+                            <span class="text-2xl font-bold text-yellow-400">90%</span>
                         </div>
                         <h4 class="font-semibold text-white">Communication</h4>
                     </div>
                     <div class="text-center">
                         <div class="w-24 h-24 mx-auto mb-4 rounded-full border-4 border-cyan-500 flex items-center justify-center">
-                            <span class="text-2xl font-bold text-cyan-400">85%</span>
+                            <span class="text-2xl font-bold text-yellow-400">85%</span>
                         </div>
                         <h4 class="font-semibold text-white">Teamwork</h4>
                     </div>
                     <div class="text-center">
                         <div class="w-24 h-24 mx-auto mb-4 rounded-full border-4 border-cyan-500 flex items-center justify-center">
-                            <span class="text-2xl font-bold text-cyan-400">75%</span>
+                            <span class="text-2xl font-bold text-yellow-400">75%</span>
                         </div>
                         <h4 class="font-semibold text-white">Project Management</h4>
                     </div>
                     <div class="text-center">
                         <div class="w-24 h-24 mx-auto mb-4 rounded-full border-4 border-cyan-500 flex items-center justify-center">
-                            <span class="text-2xl font-bold text-cyan-400">80%</span>
+                            <span class="text-2xl font-bold text-yellow-400">80%</span>
                         </div>
                         <h4 class="font-semibold text-white">Creativity</h4>
                     </div>
@@ -363,7 +389,7 @@
     <section id="projects" class="py-15 bg-gray-900/50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <span class="text-cyan-400 font-medium mb-4 block">Projects</span>
+                <span class="text-yellow-400 font-medium mb-4 block">Projects</span>
                 <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">Featured Work</h2>
                 <p class="text-gray-400 max-w-2xl mx-auto">A selection of my recent projects and achievements</p>
             </div>
@@ -378,7 +404,7 @@
                             <a href="https://blockblast.ai/public/" class="inline-block px-4 py-2 bg-cyan-500 text-white text-sm rounded-lg">View Project</a>
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">ERP System for Blackblast.ai</h3>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">ERP System for Blackblast.ai</h3>
                     <p class="text-gray-400 text-sm mb-3">Complete ERP System for Blackblast.ai with all features and functionality trust wallet intergration use web3 integration and wallet connect adding plane dealing.</p>
                     <div class="flex flex-wrap gap-2">
                         <span class="text-xs text-gray-500">Laravel</span>
@@ -400,7 +426,7 @@
                             <a href="https://pms.alphaengineeringconsultants.com/" class="inline-block px-4 py-2 bg-cyan-500 text-white text-sm rounded-lg">View Project</a>
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Full ERP System For AEC</h3>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">Full ERP System For AEC</h3>
                     <p class="text-gray-400 text-sm mb-3">Complete Full ERP system for AEC company  with permissions and role management</p>
                     <div class="flex flex-wrap gap-2">
                         <span class="text-xs text-gray-500">Laravel</span>
@@ -422,7 +448,7 @@
                             <a href="https://tryinohomes.com/" class="inline-block px-4 py-2 bg-cyan-500 text-white text-sm rounded-lg">View Project</a>
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Full Website</h3>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">Full Website</h3>
                     <p class="text-gray-400 text-sm mb-3">Complete PRofesstional Website using React js and Next js around 15+ pages.</p>
                     <div class="flex flex-wrap gap-2">
                         <span class="text-xs text-gray-500">React js</span>
@@ -435,7 +461,7 @@
             </div>
 
             <div class="text-center mt-12">
-                <a href="https://www.linkedin.com/in/umair-hussain-dev/details/projects/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BjgKCODRnSC%2BkgL%2Ff0NEG6A%3D%3D" class="inline-flex items-center px-6 py-3 border border-gray-700 text-white rounded-lg hover:border-cyan-500 hover:text-cyan-400 transition-all duration-300">
+                <a href="https://www.linkedin.com/in/umair-hussain-dev/details/projects/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BjgKCODRnSC%2BkgL%2Ff0NEG6A%3D%3D" class="inline-flex items-center px-6 py-3 border border-gray-700 text-white rounded-lg hover:border-cyan-500 hover:text-yellow-400 transition-all duration-300">
                     For All Project Click Go to Linkdln
                     <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -449,7 +475,7 @@
     <section id="contact" class="py-24">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <span class="text-cyan-400 font-medium mb-4 block">Contact</span>
+                <span class="text-yellow-400 font-medium mb-4 block">Contact</span>
                 <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">Let's Work Together</h2>
                 <p class="text-gray-400 max-w-2xl mx-auto">Have a project in mind? Let's create something amazing together.</p>
             </div>
@@ -458,17 +484,17 @@
                 <div class="grid md:grid-cols-3 gap-8 text-center">
                     <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300">
                         <div class="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                             </svg>
                         </div>
                         <h3 class="text-xl font-bold text-white mb-2">Email</h3>
-                        <a href="mailto:umairsb84@gmail.com" class="text-gray-400 hover:text-cyan-400 transition">umairsb84@gmail.com</a>
+                        <a href="mailto:umairsb84@gmail.com" class="text-gray-400 hover:text-yellow-400 transition">umairsb84@gmail.com</a>
                     </div>
 
                     <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300">
                         <div class="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                             </svg>
@@ -479,7 +505,7 @@
 
                     <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300">
                         <div class="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
                         </div>
@@ -576,15 +602,15 @@
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-6 md:mb-0">
                     <a href="#" class="text-2xl font-bold text-white">
-                        <span class="text-cyan-400 mx-1">Umair</span>Hussain
+                        <span class="text-yellow-400 mx-1">Umair</span>Hussain
                     </a>
                     <p class="mt-2 text-gray-400 text-sm">© 2025 All rights reserved</p>
                 </div>
                 <div class="flex space-x-6">
-                    <a href="https://github.com/UmairYousafzia" target="_blank" class="text-gray-400 hover:text-cyan-400 transition">
+                    <a href="https://github.com/UmairYousafzia" target="_blank" class="text-gray-400 hover:text-yellow-400 transition">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                     </a>
-                    <a href="https://www.linkedin.com/in/umair-hussain-dev/" target="_blank" class="text-gray-400 hover:text-cyan-400 transition">
+                    <a href="https://www.linkedin.com/in/umair-hussain-dev/" target="_blank" class="text-gray-400 hover:text-yellow-400 transition">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                     </a>
                 </div>
@@ -628,7 +654,7 @@
 }
 </style>
 
-    <script src="translations.js"></script>
+    <script src="script.js"></script>
     <script>
         // Language Management System
         let currentLanguage = localStorage.getItem('language') || 'en';
